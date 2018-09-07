@@ -5,6 +5,7 @@ to connect a Sega Saturn Gamepad to NAOMI. Twin-Stick also works for Virtual-On.
 
 Default is Twin-Stick mode. It maps as it works for Virtual-On as is.
 
+```
   JVS SWs     Twin-Stick
  1P Start  - Start
  1P Up     - Left Stick Up
@@ -19,11 +20,13 @@ Default is Twin-Stick mode. It maps as it works for Virtual-On as is.
  2P Right  - Right Stick Right
  2P Push 1 - Right Trigger
  2P Push 2 - Right Button
+```
 
 Once a combination of X and Z, or B and Y is detected, the mode will be changed
 to normal Gamepad mode. You can not make any of these combinations by Twin-Stick
 as it's right stick left and right, or up and down.
 
+```
   JVS SWs     Twin-Stick
  1P Start  - Start
  1P Up     - Pad Up
@@ -38,6 +41,7 @@ as it's right stick left and right, or up and down.
  1P Push 6 - Z
  1P Push 7 - L
  1P Push 8 - R
+```
 
 ## Schematic
 ```
