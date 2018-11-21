@@ -48,10 +48,10 @@ as it's right stick left and right, or up and down.
 
 Arduino Nano
 
-                         o TX1  VIN o--------------o 5V
+                         o TX1  VIN o
 JVS Data+ o--------------o RX0  GND o
                          o RST  RST o
-                         o GND   5V o
+                         o GND   5V o--------------o 5V
 JVS Data- o--------------o D2    A7 o
 JVS Sense o---o---VVVV---o D3    A6 o
               |  100 Ohm
