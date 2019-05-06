@@ -71,6 +71,7 @@ JVS Sense o---o---VVVV---o D3    A6 o
 
 
 JVS - Series B connector (same with USB Type B)
+Note: Official JVS spec explains that the pin 3 and 4 are swapped, but it is wrong. All pins layout is same with USB.
   ________
  /        \
  | 1#  #2 |  1 Sense
