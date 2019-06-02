@@ -2,6 +2,7 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
+#include "jvsio/NanoClient.cpp"
 #include "jvsio/JVSIO.cpp"
 
 // PIO pins used by JVSIO
@@ -19,7 +20,9 @@
 //  A5  - SS d3 [in]
 //  D4  - Coin  [in]
 
-JVSIO io;
+NanoSenseClient sense;
+NanoLedClient led;
+JVSIO io(sense, led);
 
 static const char gamepad_id[] = "SEGA ENTERPRISES,LTD.compat;IONA-346-NANO;ver1.00;Gamepad Mode";
 static const char twinstick_id[] = "SEGA ENTERPRISES,LTD.compat;IONA-346-NANO;Ver1.00;Twin-Stick Mode";
