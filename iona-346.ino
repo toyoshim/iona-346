@@ -20,9 +20,10 @@
 //  A5  - SS d3 [in]
 //  D4  - Coin  [in]
 
+NanoDataClient data;
 NanoSenseClient sense;
 NanoLedClient led;
-JVSIO io(sense, led);
+JVSIO io(data, sense, led);
 
 static const char gamepad_id[] = "SEGA ENTERPRISES,LTD.compat;IONA-346-NANO;ver1.00;Gamepad Mode";
 static const char twinstick_id[] = "SEGA ENTERPRISES,LTD.compat;IONA-346-NANO;Ver1.00;Twin-Stick Mode";
