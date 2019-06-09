@@ -48,12 +48,6 @@ int peek() {
 }
 
 void updateState() {
-  // Update coin.
-  uint8_t new_coin = digitalRead(4);
-  if (coin && !new_coin)
-    coin_count++;
-  coin = new_coin;
-
   // Update pad state.
   //    F  E  D  C  B  A  9  8  7  6  5  4  3  2  1  0  bit/mode
   //  [ R  X  Y  Z  S  A  C  B  >  <  v  ^  L  1  0  0] gamepad
@@ -74,6 +68,14 @@ void updateState() {
   // - impossible stick combination results in gamepad mode
   if (((pad & 0x5000) == 0) || ((pad & 0x2100) == 0))
     twinstick_mode = false;
+
+  // Update coin.
+  uint8_t new_coin = digitalRead(4);
+  if (!twinstick_mode)
+    new_coin &= (pad >> 3);
+  if (coin && !new_coin)
+    coin_count++;
+  coin = new_coin;
 }
 
 uint8_t report(size_t player, size_t line) {
