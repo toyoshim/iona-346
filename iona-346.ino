@@ -142,16 +142,16 @@ void setup() {
   // Initialize output pins.
   {
     const int out_pins[] = { A0, A1 };
-    for (size_t i = 0; i < sizeof(out_pins); ++i)
-      pinMode(out_pins[i], OUTPUT);
+    for (const int& pin: out_pins)
+      pinMode(pin, OUTPUT);
   }
   strobe(0);
 
   // Initialize input pins.
   {
     const int in_pins[] = { 4, A2, A3, A4, A5 };
-    for (size_t i = 0; i < sizeof(in_pins); ++i)
-      pinMode(in_pins[i], INPUT_PULLUP);
+    for (const int& pin: in_pins)
+      pinMode(pin, INPUT_PULLUP);
   }
 }
 
